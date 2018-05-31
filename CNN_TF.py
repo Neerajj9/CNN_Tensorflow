@@ -1,10 +1,11 @@
-import tensorflow as tf
+
+     import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-#from tensorflow.examples.tutorials import mnist
-from scipy.io import loadmat
+
+
+
 data = input_data.read_data_sets("/tmp/data/", one_hot = True)
-from sklearn.preprocessing import LabelEncoder
-from keras.utils import np_utils
+
 node1 = 500
 node2 = 500
 node3 = 500
@@ -23,7 +24,6 @@ def conv(x,W):
 
 
 def maxpool2d(x):
-    #                        size of window         movement of window
     return tf.nn.max_pool(x, ksize=[1,2,2,1], strides=[1,2,2,1], padding='SAME')
 
 
