@@ -13,20 +13,6 @@ classes = 10
 batch_size = 50
 
 
-"""data = loadmat('ex4data1.mat')
-
-
-YY = data['y']
-X = data['X']
-
-encoder = LabelEncoder()
-encoder.fit(YY)
-temp = encoder.transform(YY)
-Y = np_utils.to_categorical(temp)
-
-"""
-#Y = Y.astype(float)
-#X = X.astype(float)
 
 X = tf.placeholder('float',[None , 784])
 Y = tf.placeholder('float',)
